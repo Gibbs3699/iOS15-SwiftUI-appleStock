@@ -19,6 +19,8 @@
 		DC1CEC8A284222910001798C /* StockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1CEC89284222910001798C /* StockListView.swift */; };
 		DC1CEC8C2842428E0001798C /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1CEC8B2842428E0001798C /* Article.swift */; };
 		DC1CECAE28424B4F0001798C /* NewArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1CECAD28424B4F0001798C /* NewArticleViewModel.swift */; };
+		DC1CECB2284251700001798C /* NewsArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1CECB1284251700001798C /* NewsArticleView.swift */; };
+		DC1CECB5284253830001798C /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = DC1CECB4284253830001798C /* URLImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,7 @@
 		DC1CEC89284222910001798C /* StockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListView.swift; sourceTree = "<group>"; };
 		DC1CEC8B2842428E0001798C /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		DC1CECAD28424B4F0001798C /* NewArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArticleViewModel.swift; sourceTree = "<group>"; };
+		DC1CECB1284251700001798C /* NewsArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1CECB5284253830001798C /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +123,7 @@
 			children = (
 				DC1CEC872841B9480001798C /* SearchView.swift */,
 				DC1CEC89284222910001798C /* StockListView.swift */,
+				DC1CECB1284251700001798C /* NewsArticleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,6 +144,9 @@
 			dependencies = (
 			);
 			name = "Apple Stock";
+			packageProductDependencies = (
+				DC1CECB4284253830001798C /* URLImage */,
+			);
 			productName = "Apple Stock";
 			productReference = DC1CEC6A2841174F0001798C /* Apple Stock.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +175,9 @@
 				Base,
 			);
 			mainGroup = DC1CEC612841174F0001798C;
+			packageReferences = (
+				DC1CECB3284253820001798C /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = DC1CEC6B2841174F0001798C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,6 +211,7 @@
 				DC1CEC8328413D980001798C /* StockViewModel.swift in Sources */,
 				DC1CEC882841B9480001798C /* SearchView.swift in Sources */,
 				DC1CECAE28424B4F0001798C /* NewArticleViewModel.swift in Sources */,
+				DC1CECB2284251700001798C /* NewsArticleView.swift in Sources */,
 				DC1CEC6E2841174F0001798C /* Apple_StockApp.swift in Sources */,
 				DC1CEC80284119890001798C /* Webservice.swift in Sources */,
 				DC1CEC7E2841193E0001798C /* Stock.swift in Sources */,
@@ -403,6 +415,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC1CECB3284253820001798C /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC1CECB4284253830001798C /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC1CECB3284253820001798C /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC1CEC622841174F0001798C /* Project object */;
 }

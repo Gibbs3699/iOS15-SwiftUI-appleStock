@@ -11,15 +11,15 @@ struct NewArticleViewModel {
     
     let article: Article
     
-    var title: String {
-        return article.title
+    var imageURL: String {
+        return self.article.imageURL
     }
     
-    var imageURL: String {
-        return article.imageURL
+    var title: String {
+        return self.article.title
     }
     
     var publication: String {
-        return article.publication.uppercased()
+        return self.article.publication.uppercased()
     }
 }
