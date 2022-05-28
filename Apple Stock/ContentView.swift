@@ -9,13 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var searchTerm: String = ""
+    @ObservedObject private var stockListVM = StockListViewModel()
     
     init() {
         UINavigationBar.appearance().backgroundColor = UIColor.black
         UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UITableView.appearance().backgroundColor = UIColor.black
         UITableViewCell.appearance().backgroundColor = UIColor.black
+        
+        stockListVM.load()
     }
     
     var body: some View {
@@ -31,8 +33,11 @@ struct ContentView: View {
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
                     .offset(y: -350)
                 
-                SearchView(searchTerm: $searchTerm)
+                SearchView(searchTerm: self.$stockListVM.searchTerm)
                     .offset(y: -300)
+                
+                StockListView(stocks: self.stockListVM.stocks)
+                    .offset(y: 200)
             }
             .navigationBarTitle("Stocks")
             .edgesIgnoringSafeArea(.all)
